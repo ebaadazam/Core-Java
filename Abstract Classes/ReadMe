@@ -1,5 +1,9 @@
 Cannot Be Instantiated: You cannot create an instance of an abstract class directly. Their primary purpose is to serve as a base class for other classes.
+
 Abstract Methods: Abstract classes can have abstract methods. An abstract method is a method that is declared in the abstract class but must be implemented by the subclass. Abstract methods do not have a body; they only have the method signature.
+
 Concrete Methods: In addition to abstract methods, abstract classes can also have concrete methods (methods with an implementation). This allows you to define some common behavior that can be reused by subclasses.
+
 Constructor: Abstract classes can have constructors. Though an abstract class cannot be instantiated, its constructor can be called from a derived class's constructor.
+
 Properties/Fields: Abstract classes can contain properties or fields. These can be either static or instance-level.
