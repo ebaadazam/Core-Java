@@ -1,7 +1,7 @@
 The main differences between Comparable and Comparator in Java revolve around their purpose, usage, and implementation. Both are interfaces used for comparing objects, but they are used in different scenarios. Here’s a breakdown of the key differences:
 
 1. Package:
-2. 
+   
 Comparable is in the java.lang package.
 
 Comparator is in the java.util package.
