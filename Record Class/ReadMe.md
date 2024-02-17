@@ -26,5 +26,6 @@ Extends:<br>
 Records cannot extend any other class because they implicitly extend the java.lang.Record class.<br>
 Mutable State:<br>
 You cannot declare instance fields that are not part of the record components. All data that a record carries must be declared in the record header.<br>
-Subclassing:<br>Records are implicitly final, so you cannot subclass them.<br>
+Subclassing:<br>
+Records are implicitly final, so you cannot subclass them.<br>
 
