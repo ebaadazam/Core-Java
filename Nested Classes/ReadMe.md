@@ -7,8 +7,8 @@ A Static Nested Class is a static class defined at the member level. It can be i
 <h6>Non-Static Nested Classes(Inner Classes)</h6>
 Non-Static Nested Classes are also called Inner classes. They are defined within the scope of another class and have access to all the members (including private members) of the outer class. They are associated with an instance of the outer class and can therefore access its instance methods and fields directly. Inner classes can be further categorized into:<br>
 
-<h8>A). Local Inner Classes</h8><br>
+<h6>A). Local Inner Classes</h6><br>
 A Local Inner Class is defined within a block, typically within a method of the outer class. They are not accessible outside the block where they are defined and can only be instantiated within that block. They can access final or effectively final local variables in addition to the members of the outer class.<br>
 
-<h8>B). Anonymous Inner Classes</h8><br>
+<h6>B). Anonymous Inner Classes</h6><br>
 An Anonymous Inner Class is a local inner class without a name and is declared and instantiated all at once, typically at the point of invocation of a method that requires an instance of an interface or abstract class. They are used for implementing interfaces or extending classes in a concise manner.<br>
