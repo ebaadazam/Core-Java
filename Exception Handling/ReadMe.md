@@ -10,10 +10,10 @@ Java defines several types of exceptions that relate to its various class librar
 Exceptions can be categorized in two ways:<br>
 
 <b>1. Built-in Exceptions</b><br>
-Built-in exceptions are the exceptions that are available in Java libraries. These exceptions are suitable to explain certain error situations.
-Checked Exception<br>
+Built-in exceptions are the exceptions that are available in Java libraries. These exceptions are suitable to explain certain error situations.<br>
+<b>Checked Exception</b><br>
 Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler.<br>
-Unchecked Exception<br>
+<b>Unchecked Exception</b><br>
 The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.<br>
 <b>2. User-Defined Exceptions</b>
 
