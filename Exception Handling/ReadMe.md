@@ -10,7 +10,7 @@ Built-in exceptions are the exceptions that are available in Java libraries. The
 <b>A. Checked Exception</b><br>
 Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler.<br>
 <b>B. Unchecked Exception</b><br>
-The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.<br>
+The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.<br><br>
 <b>2. User-Defined Exceptions</b><br>
 Sometimes, the built-in exceptions in Java are not able to describe a certain situation. In such cases, users can also create exceptions, which are called ‘user-defined Exceptions’.<br>
 
