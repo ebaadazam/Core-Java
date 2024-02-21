@@ -4,3 +4,13 @@ There are mainly two types of exceptions: Checked and Unchecked. An error is con
 <b>1 Checked Exception</b><br>
 <b>2 Unchecked Exception</b><br>
 <b>3 Error</b><br>
+
+<b>Types of Exceptions</b><br>
+Java defines several types of exceptions that relate to its various class libraries. Java also allows users to define their own exceptions.<br>
+Exceptions can be categorized in two ways:<br>
+
+<b>1 Built-in Exceptions</b><br>
+Checked Exception<br>
+Unchecked Exception<br>
+<b>2 User-Defined Exceptions</b>
+
