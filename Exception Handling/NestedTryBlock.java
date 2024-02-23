@@ -1,3 +1,6 @@
+// Sometimes a situation may arise where a part of a block may cause one error and the entire block itself may cause another error.
+// In such cases, exception handlers have to be nested.
+
 public class NestedTryBlock{    
  public static void main(String args[]){   
  //outer try block   
