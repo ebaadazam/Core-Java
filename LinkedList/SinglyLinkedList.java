@@ -1,139 +1,150 @@
-// Node Class
 class Node {
     int data; // data of the node
     Node next; // reference to the next node
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
 }
 
-// LinkedList Class
-class Linked {
-
+class LinkedList {
     Node head;
+    int size = 1;
 
-    public void insertAtBegin(int data) {
-
+    public void insertionAtBegin(int data) {
         // Creating a new node with node data and address as null
-        Node node = new Node();
-        node.data = data;
-        node.next = null;
-
-        // Inserting the new node at the beginning
+        Node node = new Node(data);
+        
         node.next = head;
         head = node;
+        size++;
     }
 
-    public void insertAtPos(int index, int data) {
-
+    public void insertionAtPos(int pos, int data) {
         // Creating a new node with node data and address as null
-        Node node = new Node();
-        node.data = data;
-        node.next = null;
-
-        if (index == 0) {
-            insertAtBegin(data);
-        }
-
-        else {
-            Node n = head;
-            int count = 0;
-            while (count != index - 1) {
-                n = n.next;
-                count++;
-            }
-            node.next = n.next;
-            n.next = node;
-        }
-    }
-
-    public void insertAtEnd(int data) {
-
-        // Creating a new node with node data and address as null
-        Node node = new Node();
-        node.data = data;
-        node.next = null;
-
+        Node node = new Node(data);
+        
         if (head == null) {
             head = node;
-        }
-
-        else {
-            // Take a temporary variable n of type Node to iterate through the list
-            Node n = head;
-            while (n.next != null) {
-                n = n.next;
-            }
-            n.next = node;
-        }
-    }
-
-    public void deleteAtBegin() {
-        Node n = head;
-        head = n.next;
-        n.next = null;
-    }
-
-    public void deleteAtPos(int index) {
-        if (index == 0) {
-            deleteAtBegin();
-        }
-
-        else {
-            Node n = head;
+            size++;
+        } else if (pos == 0) {
+            insertionAtBegin(data);
+            size++;
+        } else if (pos > size) {
+            System.out.println("The Position at which you are trying to insert your node is not available!");
+        } else {
             int count = 0;
-            Node n1;
-            while (count != index - 1) {
-                n = n.next;
+
+            // Take a temporary variable 'temp' of type Node to iterate through the list
+            Node temp = head;
+            while (count != pos - 1) {
+                temp = temp.next;
                 count++;
             }
-            n1 = n.next;
-            n.next = n1.next;
+            node.next = temp.next;
+            temp.next = node;
+            size++;
         }
     }
 
-    public void deleteAtEnd() {
-        Node n = head;
-        while (n.next.next != null) {
-            n = n.next;
+    public void insertionAtLast(int data) {
+        Node node = new Node(data);
+        if (head == null) {
+            head = node;
+        } else {
+             // Take a temporary variable 'temp' of type Node to iterate through the list
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = node;
+            size++;
         }
-        n.next = null;
     }
 
-    public void display() {
-        Node n = head;
-        while (n.next != null) {
-            System.out.print(n.data + " ");
-            n = n.next;
+    public void deletionAtBegin() {
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+    }
+
+    public void deletionAtPos(int pos) {
+        Node temp = head;
+        int count = 0;
+        while (count != pos - 1) {
+            temp = temp.next;
+            count++;
         }
-        System.out.print(n.data);
-        System.out.println();
+        Node temp2 = temp.next;
+        temp.next = temp2.next;
+        temp2.next = temp;
+    }
+
+    public void deletionAtLast() {
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
+    public void displayList() {
+        Node temp = head;
+        while (temp.next != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println(temp.data + " -> " + "null");
+    }
+
+    public void searchNode(int toBeSearched) {
+        Node temp = head;
+        boolean isPresent = false;
+        while (temp != null) {
+            if (temp.data == toBeSearched) {
+                isPresent = true;
+            }
+            temp = temp.next;
+        }
+        if (isPresent) {
+            System.out.println(toBeSearched + " is present in the list!");
+        } else {
+            System.out.println(toBeSearched + " is not present in the list!");
+        }
     }
 }
 
-// Main Class
-public class SinglyLinkedList {
+class PracticeLinkedList {
     public static void main(String[] args) {
-        Linked list = new Linked(); // creating an instance of the Linked class
-        list.insertAtEnd(15);
-        list.insertAtEnd(25);
-        list.insertAtEnd(35);
-        list.insertAtEnd(45);
-        list.insertAtEnd(55);
+        LinkedList list = new LinkedList();
+        list.insertionAtLast(2);
+        list.insertionAtLast(8);
+        list.insertionAtLast(4);
+        list.insertionAtLast(12);
+        list.insertionAtLast(10);
 
-        list.insertAtBegin(100);
+        list.displayList();
+        System.out.println();
 
-        list.insertAtPos(2, 20);
+        list.insertionAtPos(3, 18);
+        list.displayList();
+        System.out.println();
 
-        list.insertAtPos(4, 30);
+        list.insertionAtPos(5, 16);
+        list.displayList();
+        System.out.println();
 
-        list.deleteAtBegin();
-        list.deleteAtBegin();
+        System.out.println("The Current Size of the LinkedList is " + list.size);
 
-        list.deleteAtPos(1);
+        list.deletionAtBegin();
+        list.displayList();
 
-        list.deleteAtEnd();
-        list.deleteAtEnd();
+        list.deletionAtPos(4);
+        list.displayList();
 
-        list.display();
+        list.searchNode(18);
+
     }
-
 }
 
