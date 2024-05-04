@@ -1,7 +1,6 @@
 class Node {
     int data;
     Node next;
-
     Node(int data) {
         this.data = data;
         this.next = null;
@@ -20,7 +19,7 @@ class LinkedList {
             slow = slow.next;
             fast = fast.next.next;
         }
-        // We maintain a reference to the node just before the slow pointer to delete the middle node
+        // We maintain a reference to the node just before the slow pointer to delete the middle node which is 'prev', 
         // by the time fast ptr reaches at the end, slow will surely be pointing to the middle node
 
       
