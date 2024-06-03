@@ -53,3 +53,58 @@ public class ReverseLinkedListDSA {
         obj.printList();
     }
 }
+
+
+
+// Recursive Way
+class Node {
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data=data;
+        this.next=null;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    // Recursive Method
+    public Node reverseList(Node head) {
+       if (head == null || head.next == null) {
+            return head;
+       }
+       Node front;
+       Node newhead = reverseList(head.next);
+       front = head.next;
+       front.next=head;
+       head.next=null;
+       return newhead;
+    }
+
+    public void printList() {
+        Node temp=head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp=temp.next;
+        }
+        System.out.println("null");
+    }
+}
+
+class PracticeLinkedList {
+    public static void main(String[] args) {
+        Node n = new Node(2);
+        n.next = new Node(4);
+        n.next.next = new Node(6);
+        n.next.next.next = new Node(8);
+
+        LinkedList obj = new LinkedList();
+        obj.head = n;
+        obj.printList();
+        obj.head = obj.reverseList(obj.head);
+
+        obj.printList();
+    }
+}
+
