@@ -1,81 +1,81 @@
 // // Approach One
-// class Node {
-//     int data;
-//     Node next;
-//     public Node(int data) {
-//         this.data=data;
-//         this.next=null;
-//     }
-// }
+class Node {
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data=data;
+        this.next=null;
+    }
+}
 
-// class LinkedList {
-//     Node head;
+class LinkedList {
+    Node head;
 
-//     public void sort() {
-//         int zero = 0; // store the number of 0
-//         int one = 0; // store the number of 1
-//         int two = 0; // store the number of 2
+    public void sort() {
+        int zero = 0; // store the number of 0
+        int one = 0; // store the number of 1
+        int two = 0; // store the number of 2
 
-//         Node temp = head; // to traverse the list
+        Node temp = head; // to traverse the list
         
-//         while (temp != null) {
-//             if (temp.data == 0)  {  zero += 1;  }
-//             else if (temp.data == 1)  {  one += 1;  }
-//             else  two += 1;
-//             temp=temp.next;
-//         }
+        while (temp != null) {
+            if (temp.data == 0)  {  zero += 1;  }
+            else if (temp.data == 1)  {  one += 1;  }
+            else  two += 1;
+            temp=temp.next;
+        }
 
-//         Node temp2=head;
-//         while (temp2 != null) {
-//             if (zero != 0) {
-//                 temp2.data = 0;
-//                 zero--;
-//             }
-//             else if (one != 0) {
-//                 temp2.data = 1;
-//                 one--;
-//             }
-//             else {
-//                 temp2.data = 2; 
-//                 two--;
-//             }
-//             temp2=temp2.next;
-//         }
-//     }
+        Node temp2=head;
+        while (temp2 != null) {
+            if (zero != 0) {
+                temp2.data = 0;
+                zero--;
+            }
+            else if (one != 0) {
+                temp2.data = 1;
+                one--;
+            }
+            else {
+                temp2.data = 2; 
+                two--;
+            }
+            temp2=temp2.next;
+        }
+    }
 
-//     public void display() {
-//         Node temp = head;
-//         while (temp != null) {
-//             System.out.print(temp.data + " ");
-//             temp = temp.next;
-//         }
-//         System.out.println("null");
-//     }
-// }
+    public void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+}
 
-// public class LinkedList_SortListOfZeroOneTwo {
-//     public static void main(String[] args) {
+public class LinkedList_SortListOfZeroOneTwo {
+    public static void main(String[] args) {
 
-//         Node n = new Node(0);
-//         n.next = new Node(2);
-//         n.next.next = new Node(1);
-//         n.next.next.next = new Node(0);
-//         n.next.next.next.next = new Node(1);
-//         n.next.next.next.next.next = new Node(2);
-//         n.next.next.next.next.next.next = new Node(1);
+        Node n = new Node(0);
+        n.next = new Node(2);
+        n.next.next = new Node(1);
+        n.next.next.next = new Node(0);
+        n.next.next.next.next = new Node(1);
+        n.next.next.next.next.next = new Node(2);
+        n.next.next.next.next.next.next = new Node(1);
 
-//         LinkedList obj = new LinkedList();
-//         obj.head = n;
+        LinkedList obj = new LinkedList();
+        obj.head = n;
 
-//         obj.display();
-//         obj.sort();
-//         obj.display();
-//     }
-// }
+        obj.display();
+        obj.sort();
+        obj.display();
+    }
+}
 
 
 
-// Approach One
+// Approach Two (Optimized)
 class Node {
     int data;
     Node next;
