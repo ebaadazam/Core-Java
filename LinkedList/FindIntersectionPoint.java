@@ -44,12 +44,15 @@ class LinkedList {
 
 public class LinkedList_IntersectionPoint {
     public static void main(String[] args) {
+
+        // Creating first linkedlist
         Node list1 = new Node(3);
         list1.next = new Node(1);
         list1.next.next = new Node(4);
         list1.next.next.next = new Node(6);
         list1.next.next.next.next = new Node(2);
 
+        // Creating second linkedlist
         Node list2 = new Node(1);
         list2.next = new Node(2);
         list2.next.next = new Node(4);
