@@ -24,7 +24,8 @@ class LinkedList {
         PriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> a.data - b.data);
 
         // Adding the head node of all LinkedLists in the priority queue
-        for (Node node : lists) {
+        for (int i = 0; i < lists.size(); i++) {
+            Node node = lists.get(i);
             if (node != null) {
                 pq.add(node);
             }
