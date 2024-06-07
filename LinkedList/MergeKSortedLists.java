@@ -1,3 +1,4 @@
+// We will be doing this with the help of a priority queue (min heap) which returns the minimum value out of all the values stored in it using the using poll() method
 import java.util.List;
 import java.util.PriorityQueue;
 
