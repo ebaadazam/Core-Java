@@ -1,16 +1,18 @@
 class Node {
     int data;
     Node next;
-    public Node(int data){
+
+    public Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
-class LinkedList{
+class LinkedList {
     Node head;
-    
-    // First we need to make sure that there is a loop in linkedlist, and then we will find the starting
+
+    // First we need to make sure that there is a loop in linkedlist, and then we
+    // will find the starting
     // point
     public Node findStartingPoint(Node head) {
         if (head == null) {
@@ -19,9 +21,19 @@ class LinkedList{
         Node slow = head;
         Node fast = head;
         while (fast != null && fast.next != null) {
-            slow=slow.next;
-            fast=fast.next.next;
+            slow = slow.next;
+            fast = fast.next.next;
+
+            // if slow == fast that means if there is a loop in list then we go and find the starting point
             if (slow == fast) {
+
+                /*
+                 * After the fast and slow ptrs collide at the same node then we place the slow
+                 * ptr again
+                 * at the head node and move both ptrs simultaneouly by one step until they
+                 * meet. Now at whatever point they meet, that point will be the starting point
+                 * of the list
+                 */
                 slow = head;
                 while (slow != fast) {
                     slow = slow.next;
@@ -33,7 +45,6 @@ class LinkedList{
         return null;
     }
 }
-
 
 public class LinkedlIst_FindStartingPointOfLoop {
     public static void main(String[] args) {
@@ -52,7 +63,5 @@ public class LinkedlIst_FindStartingPointOfLoop {
         Node res = obj.findStartingPoint(obj.head);
         System.out.println(res.data);
 
-      
     }
 }
-
