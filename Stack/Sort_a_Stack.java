@@ -2,21 +2,25 @@ import java.util.Stack;;
 
 public class Stack_Sort_a_Stack {
 
+    // Method to sort a stack
     public static void sort(Stack<Integer> stack){
         if (stack.isEmpty()) {
             return;
         }
+        // Store the top element and pop it from the stack
         int num = stack.peek();
         stack.pop();
 
+        // Recursive call
         sort(stack);
 
+        // After sorting, insert the elements in sorted order
         sortedInsert(stack, num);
     }
 
     public static void sortedInsert(Stack<Integer> stack, int num) {
 
-        // Base Case
+        // Base Case- if num is less than the top element then store it before that element
         if ( stack.isEmpty()  || ( (!stack.isEmpty()) && stack.peek() < num ) ) {
             stack.push(num);
             return;
