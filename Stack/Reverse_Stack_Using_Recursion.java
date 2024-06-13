@@ -3,28 +3,32 @@ public class Stack_Reverse_Stack_Using_Recursion {
 
     // Method to insert an element at the bottom of the stack
     public static void insertAtBottom(Stack<Integer> stack, int element){
-
-        // Base case: if stack is empty, push the item
         if (stack.isEmpty()) {
             stack.push(element);
             return;
         }
-        // Preserve the top elements until it is empty
-        int top = stack.pop();
-
-        // Recursive call to insert item at the bottom
+        int num = stack.peek();
+        stack.pop();
         insertAtBottom(stack, element);
-
-        // Push the popped element back to the stack
-        stack.push(top);
+        stack.push(num);
     }
 
     public static void reverse(Stack<Integer> stack){
-        if (!stack.isEmpty()) {
-            int top = stack.pop();
-            reverse(stack);
-            insertAtBottom(stack, top);
+
+        // Base Case
+        if (stack.isEmpty()) {
+            return;
         }
+
+        // Preserve the top element in a variable until the stack is empty
+        int num = stack.peek();
+        stack.pop();
+
+        // Recursive call to reverse the stack
+        reverse(stack);
+
+        // After reversing, insert the preserved elements at the bottom
+        insertAtBottom(stack, num);
     }
 
     public static void main(String[] args) {
@@ -43,4 +47,3 @@ public class Stack_Reverse_Stack_Using_Recursion {
         System.out.println("Stack After Reverse: " + stack);
     }
 }
-
