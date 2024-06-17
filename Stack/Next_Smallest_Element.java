@@ -5,7 +5,7 @@ public class Stack_NextSmallestElement {
     public static void findNextSmallestElement(int[] arr){
         Stack<Integer> stack = new Stack<>();
         int n = arr.length;
-        int[] result = new int[arr.length];
+        int[] result = new int[arr.length]; // the result array contains the next smaller element for each element in the original array.
         
         for (int i = n - 1; i >= 0; i--) {
             int current = arr[i];
