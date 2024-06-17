@@ -70,7 +70,7 @@ public class Stack_Next_Greater_Element {
                 result[i % n] = stack.peek();
             }
 
-            // Push the current element onto the stack.
+            // Push the current element onto the stack. Also using 'i % n' instead of 'i'
             stack.push(arr[i % n]);
         }
 
