@@ -27,7 +27,8 @@ public class Stack_Next_Greater_Element {
             // Push the current element onto the stack.
             stack.push(arr[i]);
         }
-
+        
+        // printing the result array
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i] + " -> " + result[i]);
         }
