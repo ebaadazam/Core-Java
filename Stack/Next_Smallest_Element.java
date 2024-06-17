@@ -3,7 +3,7 @@ import java.util.Stack;
 public class Stack_NextSmallestElement {
 
     public static void findNextSmallestElement(int[] arr){
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>(); // create a stack
         int n = arr.length;
         int[] result = new int[arr.length]; // the result array contains the next smaller element for each element in the original array.
         
