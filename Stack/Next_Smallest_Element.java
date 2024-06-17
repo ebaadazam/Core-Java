@@ -6,7 +6,8 @@ public class Stack_NextSmallestElement {
         Stack<Integer> stack = new Stack<>(); // create a stack
         int n = arr.length;
         int[] result = new int[arr.length]; // the result array contains the next smaller element for each element in the original array.
-        
+
+        // Run for loop from the end
         for (int i = n - 1; i >= 0; i--) {
             int current = arr[i];
             
