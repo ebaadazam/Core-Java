@@ -25,7 +25,7 @@ public class Stack_NextSmallestElement {
             stack.push(current);
         }
 
-        // Print the result
+        // Print the result array
         for (int i = 0; i < n; i++) {
             System.out.print(result[i] + " ");
         }
