@@ -5,7 +5,7 @@ public class Stack_Next_Greater_Element {
 
     public static void findNextGreaterElement(int[] arr) {
         int n = arr.length;
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>(); // create a stack
         int[] result = new int[n]; // the result array contains the next greater element for each element in the original array.
 
         // Start iterating from the last element
