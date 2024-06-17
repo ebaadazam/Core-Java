@@ -33,7 +33,7 @@ public class Stack_NextSmallestElement {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 1, 4, 3};
+        int arr[] = {2, 1, 4, 3};  // defining the arr for which we want to find the next smaller element
         findNextSmallestElement(arr);
     }
 }
