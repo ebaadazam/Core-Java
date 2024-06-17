@@ -56,7 +56,7 @@ public class Stack_Next_Greater_Element {
             result[i] = -1;
         }
 
-        // Start iterating from the last element twice for circular array
+        // Start iterating from the last element twice for circular array, using (2n-1) instead of (n-1)
         for (int i = 2 * n - 1; i >= 0; i--) {
             // We pop elements from the stack that are less than or equal to the current element because
             // they can't be the next greater element for the current element or any element to its left.
