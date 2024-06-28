@@ -24,9 +24,12 @@ class Queue_QueueImplementationUsingLinkedLIst {
     public void enqueue(int data) {
         Node newNode = new Node(data);
 
+        // if the queue is empty
         if (rear == null) {
-            front = this.rear = newNode;
-        } else {
+            front = rear = newNode;
+        } 
+        // if the queue has already got some elements in it
+        else {
             rear.next = newNode;
             rear = newNode;
         }
