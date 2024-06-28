@@ -11,6 +11,7 @@ abstract class Car {
         speed = 0;
     }
 
+    // Basic operations of a car
     // We can also implement Non-Abstract Methods in Abstract Class
     public void start() {
         on = true;
