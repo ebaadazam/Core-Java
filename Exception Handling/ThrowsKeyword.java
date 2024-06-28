@@ -16,8 +16,4 @@ public class TestThrows {
           
         System.out.println("Rest of the code..");  
     }  
-}  
-
-
-class Qsss{
-System
+}  }}}
