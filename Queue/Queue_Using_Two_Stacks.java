@@ -22,6 +22,7 @@ class Queue_QueueUsingTwoStacks {
                 int popped = stack1.pop();
                 stack2.push(popped);
             }
+            // Now the stack is empty, you can push the data
             stack1.push(data);
             while (!stack2.isEmpty()) {
                 int popped = stack2.pop();
